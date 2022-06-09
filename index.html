@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>LOGIN</title>
+</head>
+<body>
+            <!--loadr section 1-->
+  <div class="loader">
+    <div class="ring"></div>
+</div>
+<div class="fade-in-text">
+    <div class="background">
+        <div class="content">
+            <h1>Login</h1>
+            <form action="http://localhost/CHYKE/admin.html">
+                <div class="field ">
+                    <span class="fa fa-user"></span>
+                    <input type="text" placeholder="Username" >
+                </div>
+                <div class="field space">
+                    <span class="fa fa-lock"></span>
+                    <input type="password" class="pass" placeholder="Password" >
+                    <span class="show">SHOW</span>
+                </div>
+                <div class="forgot-pass">
+                    <a href="#">Forget Password?</a>
+                </div>
+                <a class="field">
+                   
+                   
+                    <input type="submit" value="LOGIN"  href="http://localhost/CHYKE/admin.html" >
+                <a>
+            </form>
+            <div class="signup">
+                Don't have an <em> account?</em> <a href="signin.html" target="-self">Signup Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://kit.fontawsesome.com/a076d05399.js"></script>
+    <script>
+        const pass_field = document.querySelector('.pass');
+        const showbtn =document.querySelector('.show');
+        showbtn.addEventListener('click',function(){
+            if(pass_field.type ==="password"){
+                pass_field.type ="text";
+                showbtn.textContent="HIDE   "
+                showbtn.style.color= "#3498db";}
+                else {
+                    pass_field.type ="password";
+                showbtn.textContent="SHOW   "
+                showbtn.style.color= "#222";}
+                
+            
+        });
+
+    </script>
+    
+       <!--loader js starts-->
+       <script>
+        const loader=document.querySelector (".loader");
+        window.onload = ()=>{
+            setTimeout(function(){ loader.style.opacity ="0";
+            setTimeout(function(){ loader.style.display ="none";},300
+            );},1500
+            );
+            
+
+        }
+   
+        
+</script>
+</body>
+</html>

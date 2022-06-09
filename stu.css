@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body{
+    display:    flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background:  linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(img/6.jpg);   
+     background-size: cover;
+    background-position: center;
+    
+}
+
+table{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-collapse: collapse;
+    width: 800px;
+    height: 200px;
+    border: 1px solid #2a2e30;
+    box-shadow: 2px 2px 12px black, -1px -1px 8px black ;
+}
+tr{
+ transition: all .2s ease-in;
+ cursor: pointer;   
+}
+
+td{
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: white;
+
+
+}
+#header{
+    background-color: #2a94c5;
+    color: #fff;
+
+}
+.stug {
+    height: 40px;
+
+}
+p a {
+    height: 50px;
+width: 50px;
+float: left;
+position: absolute;
+top: 34px;
+left: 20px;
+color: white;
+background-color: #2a94c5 ;
+border-radius: 10px;
+
+}
+i{
+    position: relative;
+    top: 19px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+}
+i:hover{
+color: #222 ;
+}
+p a :hover{
+    color:#222;
+    transition: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    cursor: pointer;
+}
+h1{
+    font-weight: 600;
+     text-align: center;
+     background-color: #2a94c5;
+     counter-reset: #fff;
+     padding: 18px 0px;
+     
+}
+i {
+    float: left;
+}
+input{
+    background-color: #2a94c5;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+}
+tr:hover {
+    background-color: #6592af;
+    transform: scale(1.02);
+    box-shadow: black -1px -1px 8px black ;
+}
+button{
+    width: 90px;
+    height: 30px;
+    margin: auto;
+    position: relative;
+    top: 550px;
+    left: 760px;
+    font-family: cursive;
+    background-color: #2a94c5;
+    box-shadow: 2px 2px 12px black, -1px -1px 8px black ;
+    border: 1px solid #2a2e30;
+    cursor: pointer;   
+
+}
+button:hover{
+   
+    transform: scale(1.02);
+    
+}
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    background: #fff;
+    transition: all 0.5s;
+    }
+.loader .ring{
+    position: relative;
+    height: 45px;
+    width: 45px;
+    border: 5px solid #ddd;
+    border-radius: 50%;
+    display:flex;
+    position:fixed;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.loader .ring::after{
+position: absolute;
+content: "";
+height: 100%;
+width: 100%;
+border: 5px solid black;
+border-radius:50%;
+border-top-color: transparent;
+animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate{
+  100%{
+      transform: rotate(360deg);
+
+  }  
+}
